@@ -1,4 +1,4 @@
-package io.masterplan.client.ui;
+package io.masterplan.client;
 
 public class MainAppWrapper {
     public static void main(String[] args) {

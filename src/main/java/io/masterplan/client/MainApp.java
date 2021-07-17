@@ -1,4 +1,4 @@
-package io.masterplan.client.ui;
+package io.masterplan.client;
 
 
 import javafx.application.Application;
@@ -21,10 +21,10 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        var main_resource = getClass().getResource("window/MainView.fxml");
-        Objects.requireNonNull(main_resource);
+        var mainResource = getClass().getResource("ui/window/MainView.fxml");
+        Objects.requireNonNull(mainResource);
 
-        Scene scene = FXMLLoader.load(main_resource);
+        Scene scene = FXMLLoader.load(mainResource);
         stage.setTitle("MasterPlan");
         stage.setScene(scene);
         stage.show();
