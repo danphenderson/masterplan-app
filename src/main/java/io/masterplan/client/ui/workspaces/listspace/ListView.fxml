@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<fx:root type="javafx.scene.layout.VBox"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@ListView.css"
+         fx:id="listViewContainer">
+
+    <!-- task and category add buttons -->
+    <HBox fx:id="addBtnContainer" alignment="CENTER_LEFT">
+        <Button fx:id="addTaskBtn" styleClass="todoAddBtn" text="TASK +"/>
+        <Button fx:id="addCategoryBtn" styleClass="todoAddBtn" text="CATEGORY +">
+            <HBox.margin><Insets left="5"/></HBox.margin>
+        </Button>
+    </HBox>
+
+    <VBox fx:id="todoContainer"/>
+</fx:root>

@@ -1,0 +1,49 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import io.masterplan.client.ui.util.icon.Icon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField ?>
+
+<?import io.masterplan.client.ui.tag.TagDisplayView?>
+<fx:root type="javafx.scene.layout.GridPane"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@ListSpaceViewHeader.css"
+         fx:id="topBar"  >
+        <padding><Insets topRightBottomLeft="5"/></padding>
+
+    <columnConstraints>
+        <ColumnConstraints minWidth="100"/>
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints prefWidth="50"/>
+    </columnConstraints>
+
+    <!-- Selected Category Info -->
+   <Label fx:id="headerName" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"
+          text="Category Name" textFill="cadetblue">
+       <font> <Font name="Segoe UI Bold" size="18.0" /> </font>
+   </Label>
+
+   <Label fx:id="categoryContents" GridPane.columnIndex="0" GridPane.rowIndex="1"
+          text="category contents placeholder" textFill="#cecece"/>
+
+    <!-- Search Bar -->
+    <HBox alignment="center" spacing="5"
+          GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" >
+        <padding><Insets top="5" bottom="5" left="20" right="20"/></padding>
+        <TextField fx:id="searchInput" onAction="#onSearchInput_action"
+                   styleClass="inputBox" HBox.hgrow="ALWAYS" promptText="Search" />
+        <Icon styleClass="searchIcon" icon="magnifier.svg" iconColor="black" iconSize="15" onMouseClicked="#onSearchInput_action"/>
+    </HBox>
+
+    <!-- Category Icon -->
+    <Icon icon="home.svg" iconColor="cadetblue" prefHeight="22" prefWidth="25"
+        GridPane.valignment="CENTER" GridPane.halignment="RIGHT" GridPane.columnIndex="2" />
+
+    <TagDisplayView fx:id="tagDisplayView" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <padding><Insets left="20" right="20"/></padding>
+    </TagDisplayView>
+
+</fx:root>

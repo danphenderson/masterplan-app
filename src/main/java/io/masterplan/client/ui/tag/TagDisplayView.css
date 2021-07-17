@@ -1,0 +1,9 @@
+#addTagBtn {
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+Icon:hover {
+    -fx-background-color: cadetblue;
+}

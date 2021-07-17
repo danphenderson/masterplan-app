@@ -1,0 +1,2 @@
+the Login and the Creation screens are all kinds of fucked, because I basically copied how you have the 'main view' set up for the different tabs
+So if someone wants to find out how to fix it, I'd much appreciate it. I think the problem is in the fx:root type

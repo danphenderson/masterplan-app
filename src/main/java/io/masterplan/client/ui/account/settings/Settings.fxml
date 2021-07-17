@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.text.Text?>
+
+
+<fx:root prefHeight="250" prefWidth="760" type="javafx.scene.control.SplitPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please work :(" />
+   </items>
+</fx:root>

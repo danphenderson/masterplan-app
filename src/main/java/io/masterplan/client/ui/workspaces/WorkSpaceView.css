@@ -1,0 +1,6 @@
+#viewContainer {
+    -fx-box-border: transparent;
+    -fx-background-color: white;
+    -fx-background-insets: 0 0;
+    -fx-padding: 0;
+}

@@ -1,0 +1,9 @@
+#tagName {
+    -fx-font-size: 12px;
+}
+
+#removeTagBtn {
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}

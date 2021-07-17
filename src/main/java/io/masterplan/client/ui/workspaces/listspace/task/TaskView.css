@@ -1,0 +1,52 @@
+#remainingContainer, #buttonContainer, #dateContainer {
+    -fx-border-width: 0 5 0 0;
+    -fx-border-color: transparent;
+}
+
+Label {
+    -fx-font-size: 14;
+}
+
+.Name {
+    -fx-font-size: 14;
+    -fx-background-color-color: transparent;
+    -fx-background-radius: 3;
+
+    -fx-border-color: transparent;
+}
+
+.NameBookmarked {
+    -fx-font-size: 14;
+    -fx-background-color: cadetblue;
+    -fx-background-radius: 3;
+
+    -fx-border-color: transparent;
+}
+
+HBox {
+    -fx-padding: 0 5 0 5;
+}
+
+.taskViewIcon:hover {
+    -fx-background-color: cadetblue;
+    -fx-border-color: transparent;
+}
+
+.taskContainer {
+    -fx-padding: 5 0 5 0;
+}
+
+.IconBtn {
+    -fx-padding: 0 2 0 2;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#dateDueLabel {
+    -fx-text-fill: #ce535d;
+    -fx-font-size: 9;
+}
+
+#tasksRemainingLabel {
+    -fx-font-size: 9;
+}

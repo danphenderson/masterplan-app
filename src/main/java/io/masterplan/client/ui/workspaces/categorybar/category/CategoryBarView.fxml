@@ -1,0 +1,35 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import io.masterplan.client.ui.workspaces.categorybar.CategoryListView?>
+<?import io.masterplan.client.ui.util.icon.Icon?>
+
+<fx:root type="javafx.scene.layout.GridPane"
+         stylesheets="@CategoryBarView.css"
+         styleClass="topBorder, catContainer"
+         xmlns="http://javafx.com/javafx/15.0.1"
+         xmlns:fx="http://javafx.com/fxml/1" >
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="20.0" />
+        <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+
+    <!-- Drop down icon (row 0, col 0) -->
+    <HBox fx:id="toggleContainer" alignment="CENTER">
+        <Button fx:id="toggleBtn" onAction="#toggleBtnHandler"
+                style="-fx-border-color: transparent; -fx-background-color: transparent;" >
+            <graphic>
+                <Icon icon="angle-down.svg" iconColor="#cccccc" iconSize="7" styleClass="categoryViewIcon" />
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Category title (row 0, col 1) -->
+    <HBox fx:id="titleContainer" alignment="CENTER_LEFT" GridPane.columnIndex="1" >
+        <Label fx:id="categoryName" text="Category Name Placeholder" textFill="black"/>
+    </HBox>
+
+
+    <CategoryListView fx:id="categoryListView" GridPane.columnIndex="1"
+                      GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+</fx:root>

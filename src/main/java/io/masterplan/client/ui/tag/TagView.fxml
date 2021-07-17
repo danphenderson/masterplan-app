@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import io.masterplan.client.ui.util.icon.Icon?>
+<?import javafx.geometry.Insets?>
+<fx:root type="javafx.scene.layout.HBox"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@TagView.css"
+         onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit"
+         minHeight="22">
+
+    <Label fx:id="tagName">
+        <HBox.margin><Insets right="3" /></HBox.margin>
+    </Label>
+
+    <Button fx:id="removeTagBtn" visible="true" onAction="#onRemoveButton_click" alignment="CENTER">
+        <graphic>
+            <Icon fx:id="removeIcon" icon="trashcan.svg" iconColor="black" iconSize="8"/>
+        </graphic>
+    </Button>
+
+</fx:root>

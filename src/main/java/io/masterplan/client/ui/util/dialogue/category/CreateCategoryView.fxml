@@ -1,0 +1,54 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<fx:root type="javafx.scene.layout.VBox"
+         styleClass="editContainer"
+         stylesheets="@CreateCategoryView.css"
+         xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         VBox.vgrow="ALWAYS">
+
+    <!-- Description -->
+    <VBox styleClass="groupContainer" VBox.vgrow="ALWAYS">
+        <Label text="DESCRIPTION:"> <VBox.margin> <Insets bottom="10.0" /> </VBox.margin> </Label>
+
+        <!-- Tittle -->
+        <HBox styleClass="leftPadded" alignment="CENTER_RIGHT" >
+            <VBox minWidth="50" alignment="CENTER">
+                <Label text="Title:"/>
+                <HBox.margin> <Insets right="5.0" /> </HBox.margin>
+            </VBox>
+            <TextField fx:id="titleInput" styleClass="inputBox" HBox.hgrow="ALWAYS"/>
+            <VBox.margin> <Insets bottom="5.0" /> </VBox.margin>
+
+            <!-- Color -->
+            <VBox minWidth="50" alignment="CENTER">
+                <Label text="Color:"/>
+                <HBox.margin> <Insets right="5.0" /> </HBox.margin>
+            </VBox>
+            <ColorPicker fx:id="colorPicker"/>
+            <VBox.margin> <Insets bottom="5.0" /> </VBox.margin>
+        </HBox>
+
+        <HBox styleClass="leftPadded" VBox.vgrow="ALWAYS">
+            <VBox minWidth="50" alignment="TOP_CENTER">
+                <Label text="Notes:"/>
+                <HBox.margin> <Insets right="5.0" /> </HBox.margin>
+            </VBox>
+            <TextArea fx:id="description" styleClass="inputBox" HBox.hgrow="ALWAYS"/>
+            <VBox.margin> <Insets bottom="5.0" /> </VBox.margin>
+        </HBox>
+    </VBox>
+
+    <!-- Tags -->
+    <HBox styleClass="groupContainer" spacing="5">
+        <Button text="Create" onAction="#onCreateBtn_click" />
+        <Button text="Cancel" onAction="#onCancelBtn_click" />
+    </HBox>
+
+</fx:root>

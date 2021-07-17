@@ -1,0 +1,37 @@
+#todoContainer {
+    -fx-padding: 5 0 0 0;
+}
+
+#listViewContainer {
+    -fx-padding: 5 0 0 0;
+    -fx-background-color: transparent;
+}
+
+#listViewContainer_B {
+    -fx-padding: 5 0 0 0;
+    -fx-background-color: lightblue;
+}
+
+.todoAddBtn {
+    -fx-background-color: #cecece;
+    -fx-opacity: 0.8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 10;
+
+    -fx-padding: 0 4 0 4;
+
+    -fx-border-width: 2;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5;
+
+    -fx-background-radius: 5;
+}
+
+.todoAddBtn:hover {
+    -fx-background-color: #cccccc;
+    -fx-border-width: 2;
+    -fx-border-color: cadetblue;
+    -fx-border-radius: 3;
+    -fx-box-sizing: border-box;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import io.masterplan.client.ui.util.icon.*?>
+
+<fx:root type="javafx.scene.layout.GridPane"
+         stylesheets="@ArchiveCategoryView.css"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         prefHeight="400.0" prefWidth="600.0">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="40.0" />
+        <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+
+    <rowConstraints>
+    </rowConstraints>
+
+
+    <!-- Drop down icon (row 0, col 0) -->
+    <HBox  fx:id="toggleContainer" alignment="CENTER">
+        <Button fx:id="toggleBtn"
+                style="-fx-border-color: transparent; -fx-background-color: transparent;" >
+            <graphic>
+                <Icon icon="angle-down.svg" iconColor="#cccccc" iconSize="7" />
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Category title (row 0, col 1) -->
+    <HBox fx:id="titleContainer" alignment="CENTER_LEFT" GridPane.columnIndex="1">
+        <Label fx:id="categoryName" text="Category Name Placeholder" styleClass="Name"/>
+    </HBox>
+
+    <!-- Category buttons (row 0, col 2) -->
+    <HBox fx:id="buttonContainer" alignment="CENTER_RIGHT" GridPane.columnIndex="2">
+
+        <Button fx:id="removeVertexBtn" onAction="#onRemoveVertexBtn_click" styleClass="IconBtn">
+            <graphic>
+                <Icon icon="trashcan.svg" iconColor="#cccccc" iconSize="13" />
+            </graphic>
+        </Button>
+
+        <Button fx:id="removeGraphBtn" onAction="#onRemoveGraphBtn_click" styleClass="IconBtn">
+            <graphic>
+                <Icon icon="dumptruck.svg" iconColor="#cccccc" iconSize="13" />
+            </graphic>
+        </Button>
+        <Button fx:id="archive" onAction="#onArchive_click" styleClass="IconBtn">
+            <graphic>
+                <Icon icon="archive.svg" iconColor="#cccccc" iconSize="12" />
+            </graphic>
+        </Button>
+    </HBox>
+
+</fx:root>

@@ -1,0 +1,69 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.paint.Color?>
+<fx:root type="javafx.scene.layout.VBox"
+         xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         alignment="TOP_CENTER" prefWidth="220" prefHeight="300" minWidth="220" minHeight="300" >
+
+        <HBox alignment="CENTER">
+                <Label text="CREATE TAG">
+                    <font>
+                        <Font name="Segoe UI Bold" size="12.0" />
+                    </font>
+                </Label>
+
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+
+        <FlowPane fx:id="tagsFlowPane" VBox.vgrow="ALWAYS" hgap="5">
+            <padding><Insets topRightBottomLeft="5" /></padding>
+        </FlowPane>
+
+        <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="35.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+            </rowConstraints>
+
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+
+            <Label text="Name:" />
+            <Label text="Color:" GridPane.rowIndex="1" />
+            <TextField fx:id="tagNameInput" GridPane.columnIndex="1" />
+            <ColorPicker fx:id="tagColorInput" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" maxWidth="Infinity"/>
+
+
+        </GridPane>
+
+        <HBox alignment="CENTER" spacing="5.0" VBox.vgrow="NEVER">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+                <Button fx:id="createBtn" text="Create" onAction="#onCreateBtn_click"/>
+                <Button fx:id="cancelBtn" text="Cancel" onAction="#onCancelBtn_click"/>
+        </HBox>
+
+</fx:root>

@@ -1,0 +1,18 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.layout.Region?>
+
+<!-- VBox containing SVG icon stored in a Region -->
+<fx:root type="javafx.scene.layout.VBox"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@Icon.css"
+         alignment="CENTER">
+
+    <Region fx:id="region">
+        <shape>
+            <SVGPath fx:id="icon"/>
+        </shape>
+    </Region>
+
+</fx:root>

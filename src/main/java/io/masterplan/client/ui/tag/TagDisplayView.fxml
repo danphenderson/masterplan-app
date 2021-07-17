@@ -1,0 +1,19 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+<?import io.masterplan.client.ui.util.icon.Icon?>
+<fx:root type="javafx.scene.layout.FlowPane"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@TagDisplayView.css"
+         vgap="5" hgap="5" alignment="CENTER_LEFT">
+
+    <padding><Insets topRightBottomLeft="5"/></padding>
+
+    <Button fx:id="addTagBtn" onAction="#onAddTagBtn_click" >
+        <graphic>
+            <Icon icon="plus.svg" iconSize="10" iconColor="#dedede"/>
+        </graphic>
+    </Button>
+
+</fx:root>

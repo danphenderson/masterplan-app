@@ -1,0 +1,44 @@
+/* id for overall container */
+.editContainer {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Class for group containers */
+.groupContainer {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #dedede;
+    -fx-padding: 10;
+}
+
+/* Class to style inputs */
+.inputBox {
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-border-color: #dedede;
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-max-width: INFINITY;
+}
+
+/* Class to pad left */
+.leftPadded {
+    -fx-padding: 0 0 0 10;
+}
+
+/* Group Labels */
+VBox.groupContainer > Label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+}
+
+#createdDateInput {
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #cecece;
+}
+
+
+DatePicker {
+    -fx-background-color: white;
+    -fx-max-width: INFINITY;
+    -fx-min-width: 100;
+}

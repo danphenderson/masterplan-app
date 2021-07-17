@@ -1,0 +1,13 @@
+/* Removed annoying default properties |
+*  Scrollbar classes: https://guigarage.com/2015/11/styling-a-javafx-scrollbar/
+*/
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+    -fx-vbar-policy: NEVER;
+    -fx-hbar-policy: NEVER;
+}

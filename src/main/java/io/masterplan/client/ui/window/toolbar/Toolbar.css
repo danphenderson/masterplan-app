@@ -1,0 +1,11 @@
+/* Toolbar BorderPane container */
+.toolbarContainer {
+    -fx-background-color: #3b3d3d;
+    -fx-padding: 0 0 10 0;
+    -fx-pref-width: 65; /* restricts width to 86, otherwise toolbarContainer will adapt to the width of the contents */
+}
+
+/* All toolbar label styling */
+Label {
+    -fx-text-fill: white;
+}

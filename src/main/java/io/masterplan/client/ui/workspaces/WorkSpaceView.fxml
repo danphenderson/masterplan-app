@@ -1,0 +1,26 @@
+<?import javafx.scene.control.SplitPane?>
+
+<!-- Split Pane containing the workspace view and edit bar !-->
+<?import io.masterplan.client.ui.workspaces.listspace.ListSpaceView?>
+<?import io.masterplan.client.ui.workspaces.editbar.EditBarContainer?>
+<?importio.masterplan.client.ui.workspaces.categorybar.CategoryListView?>
+
+<?import io.masterplan.client.ui.workspaces.categorybar.CategoryListSpaceView?>
+<?import javafx.geometry.Insets?>
+<fx:root type="javafx.scene.control.SplitPane"
+         stylesheets="@WorkSpaceView.css"
+         xmlns="http://javafx.com/javafx/15.0.1"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:id="viewContainer">
+
+    <CategoryListSpaceView fx:id="categoryListSpaceView" />
+
+    <!-- Runtime: ListView -->
+    <ListSpaceView fx:id="listSpaceView">
+            <padding><Insets topRightBottomLeft="5"/></padding>
+    </ListSpaceView>
+
+    <!-- Task EditBar -->
+    <EditBarContainer fx:id="editBarContainer"/>
+
+</fx:root>

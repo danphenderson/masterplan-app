@@ -1,0 +1,24 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import io.masterplan.client.ui.workspaces.listspace.ListSpaceViewHeader?>
+
+<?import io.masterplan.client.ui.workspaces.listspace.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+
+<?import io.masterplan.client.ui.workspaces.listspace.ListView?>
+<fx:root type="javafx.scene.layout.VBox" stylesheets="@ListSpaceView.css"
+         xmlns="http://javafx.com/javafx/15.0.1"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:id="listContainer">
+
+      <!-- Runtime: listview header  -->
+      <ListSpaceViewHeader fx:id="listViewHeader" />
+
+      <!-- Runtime: category view | ID is for scroll event handler  -->
+      <ScrollPane fx:id="scrollPane">
+            <ListView fx:id="listView" />
+      </ScrollPane>
+
+</fx:root>

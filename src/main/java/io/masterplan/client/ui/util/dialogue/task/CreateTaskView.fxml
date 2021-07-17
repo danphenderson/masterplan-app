@@ -1,0 +1,51 @@
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root type="javafx.scene.layout.VBox"
+         styleClass="editContainer"
+         stylesheets="@CreateTaskView.css"
+         xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         VBox.vgrow="ALWAYS">
+
+    <!-- Description -->
+    <VBox styleClass="groupContainer" VBox.vgrow="ALWAYS">
+        <Label text="DESCRIPTION:"> <VBox.margin> <Insets bottom="10.0" /> </VBox.margin> </Label>
+
+        <!-- Title -->
+        <HBox styleClass="leftPadded" alignment="CENTER_RIGHT" >
+            <VBox minWidth="50" alignment="CENTER">
+                <Label text="Title:"/>
+                <HBox.margin> <Insets right="5.0" /> </HBox.margin>
+            </VBox>
+            <TextField fx:id="titleInput" styleClass="inputBox" HBox.hgrow="ALWAYS"/>
+            <VBox.margin> <Insets bottom="5.0" /> </VBox.margin>
+        </HBox>
+
+        <HBox styleClass="leftPadded" VBox.vgrow="ALWAYS">
+            <VBox minWidth="50" alignment="TOP_CENTER">
+                <Label text="Notes:"/>
+                <HBox.margin> <Insets right="5.0" /> </HBox.margin>
+            </VBox>
+            <TextArea fx:id="description" styleClass="inputBox" HBox.hgrow="ALWAYS"/>
+            <VBox.margin> <Insets bottom="5.0" /> </VBox.margin>
+        </HBox>
+    </VBox>
+
+    <!-- Dates -->
+    <VBox styleClass="groupContainer">
+        <Label text="DATES:"> <VBox.margin> <Insets bottom="10.0" /> </VBox.margin> </Label>
+        <HBox styleClass="leftPadded">
+            <VBox minWidth="50" alignment="CENTER"> <Label text="Due By:"/> </VBox>
+            <DatePicker fx:id="dueDateInput" styleClass="inputBox" promptText="Select Date" HBox.hgrow="ALWAYS">
+                <HBox.margin> <Insets left="5.0" /> </HBox.margin>
+            </DatePicker>
+        </HBox>
+    </VBox>
+
+    <!-- Tags -->
+    <HBox styleClass="groupContainer" spacing="5">
+        <Button text="Create" onAction="#onCreateBtn_click" />
+        <Button text="Cancel" onAction="#onCancelBtn_click" />
+    </HBox>
+
+</fx:root>
