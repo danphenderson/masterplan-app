@@ -29,7 +29,7 @@
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
-                <version>11</version>
+                <version>${javafx.version}</version>
             </dependency>
 
             <dependency>
@@ -41,7 +41,7 @@
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-fxml</artifactId>
-                <version>15</version>
+                <version>${javafx.version}</version>
             </dependency>
 
             <dependency>
