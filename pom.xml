@@ -84,7 +84,6 @@
                         <archive>
                             <manifestFile>src/main/java/MANIFEST.MF</manifestFile>
                         </archive>
-
                     </configuration>
                 </plugin>
 
