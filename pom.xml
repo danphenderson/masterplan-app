@@ -15,8 +15,11 @@
             <maven.compiler.target>11</maven.compiler.target>
 
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
             <javafx.version>16</javafx.version>
             <javafx.maven.plugin.version>0.0.6</javafx.maven.plugin.version>
+            <junit.version>4.12</junit.version>
+            <json-simple.version>1.1</json-simple.version>
         </properties>
 
         <dependencies>
@@ -47,13 +50,13 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>${junit.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.googlecode.json-simple</groupId>
                 <artifactId>json-simple</artifactId>
-                <version>1.1</version>
+                <version>${json-simple.version}</version>
             </dependency>
         </dependencies>
 
@@ -103,4 +106,5 @@
             </resources>
 
         </build>
+
 </project>
