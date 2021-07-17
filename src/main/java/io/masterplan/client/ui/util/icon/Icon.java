@@ -71,7 +71,7 @@ public class Icon extends Region {
      * @param filename name of svg file ("home.svg")
      */
     public void setIcon(String filename) {
-        File file = new File("assets/icons/" + filename);
+        // File file = new File("assets/icons/" + filename);
         String fileData;
 
 //        try {

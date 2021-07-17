@@ -1,8 +1,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import ui.tag.TagDisplayView?>
-<?import ui.util.icon.Icon?>
-<?import ui.workspaces.listspace.ListView?>
+<?import io.masterplan.client.ui.tag.TagDisplayView?>
+<?import io.masterplan.client.ui.util.icon.Icon?>
+<?import io.masterplan.client.ui.workspaces.listspace.ListView?>
 
 <fx:root type="javafx.scene.layout.GridPane"
          stylesheets="@CategoryView.css"

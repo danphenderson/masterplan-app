@@ -1,7 +1,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import io.masterplan.client.ui.workspaces.categorybar.CategoryListView?>
 <?import io.masterplan.client.ui.util.icon.Icon?>
+
+<?import io.masterplan.client.ui.workspaces.categorybar.CategoryListView?>
 
 <fx:root type="javafx.scene.layout.GridPane"
          stylesheets="@CategoryBarView.css"
