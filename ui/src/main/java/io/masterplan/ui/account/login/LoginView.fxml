@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.Scene?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import io.masterplan.ui.window.toolbar.tab.Tab?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ToggleGroup?>
+
+
+<fx:root fx:controller="ui.account.login.LoginView" type="javafx.scene.layout.VBox" alignment="CENTER"
+         xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <BorderPane fx:id="mainContainer" HBox.hgrow="ALWAYS">
+
+        <left>
+            <VBox>
+
+                <fx:define>
+                    <ToggleGroup fx:id="tabToggleGroup" />
+                </fx:define>
+
+                <Tab text="LOGIN" onAction="#switchToLogin" toggleGroup="$tabToggleGroup" selected="true" />
+                <Tab text="CREATE" onAction="#switchToLogin" toggleGroup="$tabToggleGroup" />
+
+            </VBox>
+        </left>
+
+        <!-- Center view -->
+        <center/>
+
+    </BorderPane>
+</fx:root>

@@ -1,0 +1,34 @@
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import io.masterplan.ui.window.toolbar.tab.Tab?>
+<?import io.masterplan.ui.util.icon.Icon?>
+
+<!-- Toolbar with tab menu and user bar -->
+<?import javafx.geometry.Insets?>
+<BorderPane fx:controller="io.masterplan.ui.window.toolbar.ToolbarController"
+            xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="toolbarContainer" stylesheets="@Toolbar.css" >
+
+    <!-- Tab Bar -->
+    <center>
+            <VBox fx:id="tabBar">
+                <Tab fx:id="homeTab" icon="home.svg" text="HOME" iconSize="4"/>
+                <Tab fx:id="workspaceTab" icon="folder-open.svg" text="WORKSPACE"/>
+                <Tab fx:id="settingsTab" icon="cogs.svg" text="SETTINGS" />
+                <Tab icon="archive.svg" text="ARCHIVE" />
+            </VBox>
+    </center>
+
+    <!-- User Bar -->
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="30.0">
+            <Icon icon="account_circle.svg" iconColor="white" />
+<!--            <Label text="BENNY" textAlignment="CENTER">-->
+<!--                <HBox.margin> <Insets left="5"/> </HBox.margin>-->
+<!--            </Label>-->
+        </HBox>
+    </bottom>
+
+</BorderPane>

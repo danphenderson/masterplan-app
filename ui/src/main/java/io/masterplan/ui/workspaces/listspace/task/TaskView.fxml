@@ -1,0 +1,82 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import io.masterplan.ui.tag.TagDisplayView?>
+<?import io.masterplan.ui.util.icon.*?>
+<?import io.masterplan.ui.workspaces.listspace.ListView ?>
+
+<fx:root type="javafx.scene.layout.GridPane"
+         stylesheets="@TaskView.css"
+         styleClass="taskContainer, topBorder"
+         xmlns="http://javafx.com/javafx/15.0.1"
+         xmlns:fx="http://javafx.com/fxml/1" >
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="40.0" />
+        <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+
+    <rowConstraints>
+    </rowConstraints>
+
+    <!-- Drop down icon (row 0, col 0) -->
+    <HBox fx:id="toggleContainer" alignment="CENTER" >
+        <Button fx:id="toggleBtn" onAction="#toggleBtnHandler"
+                style="-fx-border-color: transparent; -fx-background-color: transparent;" >
+            <graphic>
+                <Icon icon="angle-down.svg" iconColor="#cccccc" iconSize="7" styleClass="taskViewIcon" />
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Category title (row 0, col 1) -->
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" spacing="5">
+        <CheckBox fx:id="completedCheckBox" prefWidth="10" prefHeight="10" >
+            <HBox.margin><Insets right="5"/></HBox.margin>
+        </CheckBox>
+        <Label fx:id="taskName" text="Task Name Placeholder" />
+    </HBox>
+
+    <!-- Category buttons (row 0, col 2) -->
+    <HBox fx:id="buttonContainer" alignment="CENTER_RIGHT" GridPane.columnIndex="2">
+
+        <Button fx:id="removeVertexBtn" onAction="#onRemoveVertexBtn_click" styleClass="IconBtn">
+            <graphic>
+                <Icon icon="trashcan.svg" iconColor="#cccccc" iconSize="13" styleClass="taskViewIcon" />
+            </graphic>
+        </Button>
+
+<!--        <Button fx:id="removeGraphBtn"-->
+<!--                onAction="#onRemoveGraphBtn_click" styleClass="IconBtn">-->
+<!--            <graphic>-->
+<!--                <Icon icon="dumptruck.svg" iconColor="#cccccc" iconSize="13" styleClass="taskViewIcon" />-->
+<!--            </graphic>-->
+<!--        </Button>-->
+
+        <Button fx:id="bookmark" onAction="#onBookmark_click" styleClass="IconBtn">
+            <graphic>
+                <Icon icon="bookmark.svg" iconColor="#cccccc" iconSize="12" styleClass="taskViewIcon" />
+            </graphic>
+        </Button>
+
+        <Button fx:id="archive" onAction="#onArchive_click" styleClass="IconBtn">
+            <graphic>
+                <Icon icon="archive.svg" iconColor="#cccccc" iconSize="12" styleClass="taskViewIcon" />
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Category Tags (row 1, col 2)-->
+    <TagDisplayView fx:id="tagDisplayView" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- Status of Task (row 1, col 1) -->
+    <VBox fx:id="remainingContainer" GridPane.columnIndex="2" GridPane.rowIndex="1" alignment="CENTER" >
+        <Label fx:id="dateDueLabel" text=""/>
+        <Label fx:id="tasksRemainingLabel" text="num tasks remaining placeholder" textFill="#cecece"/>
+    </VBox>
+
+
+    <ListView fx:id="listView"
+              GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+
+</fx:root>
