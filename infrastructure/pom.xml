@@ -55,25 +55,27 @@
             <version>${javafx.version}</version>
         </dependency>
 
+        <!--        import 3 javafx graphics to make the fat jar include the needed dependencies for cross platform execution -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>${javafx.version}</version>
+            <classifier>mac</classifier>
         </dependency>
-        <!--        Uncomment to make the fat jar include the needed dependencies for cross platform execution -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.openjfx</groupId>-->
-        <!--            <artifactId>javafx-graphics</artifactId>-->
-        <!--            <version>${javafx.version}</version>-->
-        <!--            <classifier>win</classifier>-->
-        <!--        </dependency>-->
 
-        <!--        <dependency>-->
-        <!--            <groupId>org.openjfx</groupId>-->
-        <!--            <artifactId>javafx-graphics</artifactId>-->
-        <!--            <version>${javafx.version}</version>-->
-        <!--            <classifier>linux</classifier>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>win</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>linux</classifier>
+        </dependency>
     </dependencies>
 
     <build>

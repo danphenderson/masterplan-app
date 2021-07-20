@@ -8,6 +8,11 @@ import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.SVGPath;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 /**
  * Icon Custom Component
  */
@@ -69,15 +74,17 @@ public class Icon extends Region {
      * @param filename name of svg file ("home.svg")
      */
     public void setIcon(String filename) {
-        // File file = new File("assets/icons/" + filename);
+
+        File file = new File("ui/src/main/resources/icons/" + filename);
         String fileData;
 
-//        try {
-//            fileData = Files.readString(Paths.get(getClass()));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//        icon.setContent(fileData);
+        try {
+            fileData = Files.readString(Paths.get(file.getPath()));
+        } catch (IOException e) {
+            System.out.println("Exception loading icon: " + file.getPath());
+            throw new RuntimeException(e);
+        }
+        icon.setContent(fileData);
     }
 
     /**
