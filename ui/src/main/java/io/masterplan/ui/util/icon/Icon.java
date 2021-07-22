@@ -8,7 +8,6 @@ import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.SVGPath;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -75,13 +74,11 @@ public class Icon extends Region {
      */
     public void setIcon(String filename) {
 
-        File file = new File("ui/src/main/resources/icons/" + filename);
         String fileData;
 
         try {
-            fileData = Files.readString(Paths.get(file.getPath()));
+            fileData = Files.readString(Paths.get("ui/src/main/resources/icons/" + filename));
         } catch (IOException e) {
-            System.out.println("Exception loading icon: " + file.getPath());
             throw new RuntimeException(e);
         }
         icon.setContent(fileData);

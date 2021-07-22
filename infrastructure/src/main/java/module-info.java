@@ -10,5 +10,6 @@ module io.masterplan.infrastructure {
     requires transitive javafx.controls;
     requires transitive javafx.fxml;
     requires transitive javafx.graphics;
+
     requires json.simple;
 }
