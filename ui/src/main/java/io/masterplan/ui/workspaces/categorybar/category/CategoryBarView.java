@@ -2,11 +2,13 @@ package io.masterplan.ui.workspaces.categorybar.category;
 
 
 import io.masterplan.infrastucture.components.Category;
+import io.masterplan.infrastucture.components.Colour;
 import io.masterplan.infrastucture.components.TodoElement;
 import io.masterplan.infrastucture.models.MainModel;
 import io.masterplan.infrastucture.observable.IReadOnlyObservable;
 import io.masterplan.infrastucture.observable.Observable;
 import io.masterplan.infrastucture.observable.ObservableManager;
+import io.masterplan.ui.util.ColorConverter;
 import io.masterplan.ui.util.Viewable;
 import io.masterplan.infrastucture.util.graph.ObservableVertex;
 import io.masterplan.infrastucture.util.graph.ObservableVertexChange;
@@ -129,11 +131,12 @@ public class CategoryBarView extends GridPane implements Viewable {
         categoryName.setText(name);
     }
 
-    private void onCategoryColorChange(Color color) {
+    private void onCategoryColorChange(Colour color) {
         if (color == null)
             return;
-        titleContainer.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
-        toggleContainer.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
+        Color col = ColorConverter.convertToFXColor(color);
+        titleContainer.setBackground(new Background(new BackgroundFill(col, CornerRadii.EMPTY, Insets.EMPTY)));
+        toggleContainer.setBackground(new Background(new BackgroundFill(col, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 
     public void setCategory(ObservableVertex<TodoElement> categoryVertex) {

@@ -2,7 +2,6 @@ package io.masterplan.infrastucture.components;
 
 import io.masterplan.infrastucture.observable.IReadOnlyObservable;
 import io.masterplan.infrastucture.observable.Observable;
-import javafx.scene.paint.Color;
 
 
 public final class Tag {
@@ -10,13 +9,13 @@ public final class Tag {
     private final Observable<String> _name = new Observable<>("");
     public final IReadOnlyObservable<String> name = _name;
 
-    private final Observable<Color> _color = new Observable<>(Color.TRANSPARENT);
-    public final IReadOnlyObservable<Color> color = _color;
+    private final Observable<Colour> _color = new Observable<>(new Colour(255, 255, 255, 255));
+    public final IReadOnlyObservable<Colour> color = _color;
 
 
     public Tag() { }
 
-    public Tag(String name, Color color) {
+    public Tag(String name, Colour color) {
         if(name == null)
             throw new IllegalArgumentException("name cannot be null");
     }
@@ -33,14 +32,14 @@ public final class Tag {
         return _name.getValue();
     }
 
-    public void setColor(Color color) {
+    public void setColor(Colour color) {
         if(color == null)
             throw new IllegalArgumentException("Tag.setColor() - name can not be null");
 
         this._color.setValue(color);
     }
 
-    public Color getColor() {
+    public Colour getColor() {
         return _color.getValue();
     }
 

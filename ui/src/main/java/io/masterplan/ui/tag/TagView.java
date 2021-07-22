@@ -1,6 +1,8 @@
 package io.masterplan.ui.tag;
 
+import io.masterplan.infrastucture.components.Colour;
 import io.masterplan.infrastucture.components.Tag;
+import io.masterplan.ui.util.ColorConverter;
 import javafx.scene.layout.*;
 import io.masterplan.infrastucture.observable.IListener;
 import io.masterplan.infrastucture.observable.ObservableManager;
@@ -77,9 +79,9 @@ public class TagView extends HBox implements Viewable {
         tagName.setText(name);
     }
 
-    private void onTagColorChange(Color color) {
-        changeBackgroundColor(color);
-        removeIcon.setIconColor(color);
+    private void onTagColorChange(Colour color) {
+        changeBackgroundColor(ColorConverter.convertToFXColor(color));
+        removeIcon.setIconColor(ColorConverter.convertToFXColor(color));
     }
 
     private void changeBackgroundColor(Color color) {

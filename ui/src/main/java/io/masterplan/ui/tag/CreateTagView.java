@@ -1,6 +1,7 @@
 package io.masterplan.ui.tag;
 
 import io.masterplan.infrastucture.components.Tag;
+import io.masterplan.ui.util.ColorConverter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -91,7 +92,7 @@ public class CreateTagView extends VBox implements Viewable{
         TagView tagView = (TagView) me.getSource();
         this.tag = tagView.tag;
         this.tagNameInput.setText(tag.getName());
-        this.tagColorInput.setValue(tag.getColor());
+        this.tagColorInput.setValue(ColorConverter.convertToFXColor(tag.getColor()));
     }
 
     private void onTagRemoved(TagView tagView) {
@@ -106,7 +107,7 @@ public class CreateTagView extends VBox implements Viewable{
         }
 
         tag.setName(tagNameInput.getText());
-        tag.setColor(tagColorInput.getValue());
+        tag.setColor(ColorConverter.convertToColor(tagColorInput.getValue()));
 
         stage.close();
     }

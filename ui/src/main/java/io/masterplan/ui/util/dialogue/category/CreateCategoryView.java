@@ -1,6 +1,7 @@
 package io.masterplan.ui.util.dialogue.category;
 
 import io.masterplan.infrastucture.components.Category;
+import io.masterplan.ui.util.ColorConverter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -59,7 +60,7 @@ public class CreateCategoryView extends VBox implements Viewable {
     private void onCreateBtn_click(ActionEvent ae) {
         cat.setName(titleInput.getText());
         cat.setDescription(description.getText());
-        cat.setBackgroundColor(colorPicker.getValue());
+        cat.setBackgroundColor(ColorConverter.convertToColor(colorPicker.getValue()));
 
         stage.close();
     }

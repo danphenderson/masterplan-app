@@ -8,6 +8,7 @@ import io.masterplan.infrastucture.observable.IReadOnlyObservable;
 import io.masterplan.infrastucture.observable.Observable;
 import io.masterplan.infrastucture.observable.ObservableManager;
 import io.masterplan.infrastucture.util.graph.ObservableVertex;
+import io.masterplan.ui.util.ColorConverter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -73,7 +74,7 @@ public class CategoryEditBar extends VBox implements IEditBar {
 
         cat.setName(titleInput.getText());
 
-        cat.setBackgroundColor(colorPicker.getValue());
+        cat.setBackgroundColor(ColorConverter.convertToColor(colorPicker.getValue()));
     }
 
     @FXML
@@ -95,7 +96,7 @@ public class CategoryEditBar extends VBox implements IEditBar {
             description.setText(cat.getDescription());
             titleInput.setText(cat.getName());
             createdDateInput.setText(cat.creationDate.getTime().toString());
-            colorPicker.setValue(cat.backgroundColor.getValue());
+            colorPicker.setValue(ColorConverter.convertToFXColor(cat.getBackgroundColor()));
         }
     }
 
