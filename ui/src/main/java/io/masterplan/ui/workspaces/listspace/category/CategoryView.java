@@ -198,9 +198,6 @@ public class CategoryView extends GridPane implements Viewable {
         this.setVisible(!isArchived);
     }
 
-
-
-
     private void onCategoryNameChange(String name) {
         categoryName.setText(name);
     }

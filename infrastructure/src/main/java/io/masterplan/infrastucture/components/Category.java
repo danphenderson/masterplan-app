@@ -12,7 +12,7 @@ public final class Category extends TodoElement {
     private final Observable<URI> _backgroundImage = new Observable<>( null );
     public final IReadOnlyObservable<URI> backgroundImage = _backgroundImage;
 
-    private final Observable<Colour> _backgroundColor = new Observable<>( new Colour(255,255,255, 255) );
+    private final Observable<Colour> _backgroundColor = new Observable<>( null );
     public final IReadOnlyObservable<Colour> backgroundColor = _backgroundColor;
 
     public Category() {

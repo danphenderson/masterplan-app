@@ -9,7 +9,7 @@ import io.masterplan.ui.workspaces.archivespace.ArchiveListSpaceView;
 /**
  * MainView Controller
  */
-public class MainViewController {
+public class MainView {
 
     @FXML
     private BorderPane mainContainer;

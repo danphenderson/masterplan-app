@@ -9,7 +9,7 @@ public final class Tag {
     private final Observable<String> _name = new Observable<>("");
     public final IReadOnlyObservable<String> name = _name;
 
-    private final Observable<Colour> _color = new Observable<>(new Colour(255, 255, 255, 255));
+    private final Observable<Colour> _color = new Observable<>(null);
     public final IReadOnlyObservable<Colour> color = _color;
 
 

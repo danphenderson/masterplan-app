@@ -22,6 +22,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         URL fxmlLocation = getClass().getResource("window/MainView.fxml");
+//        URL fxmlLocation = getClass().getResource("account/login/LoginView.fxml");
         System.out.println(fxmlLocation);
 
         Scene scene = FXMLLoader.load(fxmlLocation);

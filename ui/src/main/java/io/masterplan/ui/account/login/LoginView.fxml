@@ -11,11 +11,10 @@
 <?import javafx.scene.control.ToggleGroup?>
 
 
-<fx:root fx:controller="ui.account.login.LoginView" type="javafx.scene.layout.VBox" alignment="CENTER"
+<fx:root fx:controller="io.masterplan.ui.account.login.LoginView" type="javafx.scene.layout.VBox" alignment="CENTER"
          xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
 
     <BorderPane fx:id="mainContainer" HBox.hgrow="ALWAYS">
-
         <left>
             <VBox>
 

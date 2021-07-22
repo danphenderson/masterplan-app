@@ -26,7 +26,6 @@ public class EditBarContainer extends VBox implements Viewable {
     }
 
     private void onEditVertexChange(ObservableVertex<TodoElement> editVertex) {
-
         System.out.println("EditVertex change");
 
         if(activeEditBar != null)
@@ -34,18 +33,16 @@ public class EditBarContainer extends VBox implements Viewable {
 
         getChildren().clear();
 
-        if(editVertex == null) {
+        if (editVertex == null) {
             return;
-        }else if(editVertex.getElement() instanceof Task) {
+        } else if(editVertex.getElement() instanceof Task) {
             activeEditBar = new TaskEditBar();
-        }
-        else if(editVertex.getElement() instanceof Category) {
+        } else if(editVertex.getElement() instanceof Category) {
             activeEditBar = new CategoryEditBar();
         }
         else {
             throw new IllegalArgumentException("editVertex.getElement() must either be of type Task or Category");
         }
-
         activeEditBar.setEditVertex(MainModel.model.editVertex.getValue());
         activeEditBar.registerListeners();
         getChildren().add(activeEditBar.node());
@@ -66,8 +63,4 @@ public class EditBarContainer extends VBox implements Viewable {
         if(activeEditBar != null)
             activeEditBar.unregisterListeners();
     }
-
-
-
-
 }

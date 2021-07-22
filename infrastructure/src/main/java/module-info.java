@@ -7,7 +7,5 @@ module io.masterplan.infrastructure {
     exports io.masterplan.infrastucture.util.collections;
     exports io.masterplan.infrastucture.util.vector;
 
-
-
     requires json.simple;
 }
