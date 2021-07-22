@@ -7,9 +7,7 @@ module io.masterplan.infrastructure {
     exports io.masterplan.infrastucture.util.collections;
     exports io.masterplan.infrastucture.util.vector;
 
-    requires transitive javafx.controls;
-    requires transitive javafx.fxml;
-    requires transitive javafx.graphics;
+
 
     requires json.simple;
 }

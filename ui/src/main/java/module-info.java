@@ -1,6 +1,9 @@
 module io.masterplan.ui {
 
     requires io.masterplan.infrastructure;
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires javafx.graphics;
 
     opens io.masterplan.ui                                  to javafx.graphics, javafx.controls, javafx.fxml;
     opens io.masterplan.ui.workspaces.categorybar           to javafx.graphics, javafx.controls, javafx.fxml;
