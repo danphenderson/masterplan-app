@@ -1,7 +1,5 @@
 # Masterplan Desktop Application 
 
-__Currently Under Development__
-
 ----
  
 ### Notes to Developers:
